@@ -1,0 +1,41 @@
+# Sample create promptpay request (bad request)
+POST http://localhost:8080/createPromptpay
+Content-Type: application/json
+
+{
+    "input": "",
+    "customerId": ""
+}
+
+###
+
+# Sample create promptpay request (success)
+POST http://localhost:8080/createPromptpay
+Content-Type: application/json
+
+{
+    "input": "0851245679",
+    "customerId": "1"
+}
+
+###
+
+# Sample confirm promptpay request (bad request)
+POST http://localhost:8080/confirmPromptpay
+Content-Type: application/json
+
+{
+    "promptpayId": "",
+    "amount": 1
+}
+
+###
+
+# Sample confirm promptpay request (success depending on timing or data integrity)
+POST http://localhost:8080/confirmPromptpay
+Content-Type: application/json
+
+{
+    "promptpayId": "d08935fd-c072-4648-b25d-fede692eadb3",
+    "amount": 1
+}
